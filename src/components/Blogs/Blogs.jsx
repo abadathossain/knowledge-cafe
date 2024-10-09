@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import Blog from "../Blog/Blog"
 
-export default function Blogs() {
+export default function Blogs({handleBookmarks}) {
 
     const [blogs, setBlogs]=useState([])
 
@@ -20,6 +20,7 @@ export default function Blogs() {
         blogs.map(blog=><Blog 
             key={blog.id}
              blog={blog}
+             handleBookmarks={handleBookmarks}
              ></Blog>)
     }
     </div>
